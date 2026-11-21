@@ -1,0 +1,2882 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mibes by Michael y Siberley | Sistema Integral 3D y Regalos Personalizados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --choco-dark: #3B180E;
+            --choco-medium: #562618;
+            --choco-light: #8A4B38;
+            --cream-bg: #FAF6F3;
+            --cream-card: #FFFFFF;
+            --cream-border: #EADED6;
+            --accent-rose: #D98A7C;
+            --text-main: #2C120A;
+            --text-muted: #7D645C;
+            
+            --st-pendiente-bg: #FEF3C7;
+            --st-pendiente-txt: #92400E;
+            --st-produccion-bg: #E0E7FF;
+            --st-produccion-txt: #3730A3;
+            --st-listo-bg: #CCFBF1;
+            --st-listo-txt: #115E59;
+            --st-entregado-bg: #D1FAE5;
+            --st-entregado-txt: #065F46;
+            --st-cancelado-bg: #F3F4F6;
+            --st-cancelado-txt: #4B5563;
+
+            --pay-sin-bg: #FEE2E2;
+            --pay-sin-txt: #991B1B;
+            --pay-parcial-bg: #E0F2FE;
+            --pay-parcial-txt: #075985;
+            --pay-pagado-bg: #D1FAE5;
+            --pay-pagado-txt: #065F46;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--cream-bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding-bottom: 4.5rem;
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--choco-dark);
+            color: #FFFFFF;
+            padding: 1.1rem 2rem;
+            border-bottom: 4px solid var(--accent-rose);
+            box-shadow: 0 4px 20px rgba(59, 24, 14, 0.16);
+        }
+
+        .header-container {
+            max-width: 1340px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 1.1rem;
+        }
+
+        .brand-logo-img {
+            width: 72px;
+            height: 82px;
+            object-fit: contain;
+            border-radius: 8px;
+            background-color: #38180E;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 2px;
+            flex-shrink: 0;
+        }
+
+        .brand-text h1 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .brand-text h1 span.by-founders {
+            font-weight: 400;
+            font-size: 1rem;
+            color: #F3D5CE;
+            font-style: italic;
+        }
+
+        .brand-text p {
+            font-size: 0.83rem;
+            color: #D8C3BC;
+            margin-top: 3px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 0.55rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn-header {
+            background-color: rgba(255,255,255,0.1);
+            color: #FFFFFF;
+            border: 1px solid rgba(255,255,255,0.35);
+            padding: 0.58rem 0.95rem;
+            border-radius: 10px;
+            font-size: 0.81rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .btn-header:hover {
+            background-color: #FFFFFF;
+            color: var(--choco-dark);
+        }
+
+        /* NAV TABS */
+        .nav-tabs {
+            max-width: 1340px;
+            margin: 1.3rem auto 0;
+            padding: 0 1.5rem;
+            display: flex;
+            gap: 0.65rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: var(--cream-card);
+            border: 1.5px solid var(--cream-border);
+            color: var(--text-muted);
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            position: relative;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--choco-light);
+            color: var(--choco-dark);
+        }
+
+        .tab-btn.active {
+            background: var(--choco-dark);
+            color: #FFFFFF;
+            border-color: var(--choco-dark);
+            box-shadow: 0 4px 12px rgba(59, 24, 14, 0.16);
+        }
+
+        .nav-alert-dot {
+            background: #EF4444;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.1rem 0.45rem;
+            border-radius: 12px;
+            font-weight: 800;
+            display: none;
+        }
+
+        main {
+            max-width: 1340px;
+            margin: 1.3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .tab-section { display: none; }
+        .tab-section.active {
+            display: block;
+            animation: fadeIn 0.25s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* BANNER INVERSIÓN */
+        .investment-banner {
+            background: var(--cream-card);
+            border: 1.5px solid var(--cream-border);
+            border-radius: 18px;
+            padding: 1.35rem 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(59, 24, 14, 0.04);
+            display: grid;
+            grid-template-columns: 98px 1fr;
+            gap: 1.4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 650px) {
+            .investment-banner { grid-template-columns: 1fr; text-align: center; }
+            .mascot-container { margin: 0 auto; }
+        }
+
+        .mascot-container {
+            width: 96px;
+            height: 96px;
+            background: #FDF8F5;
+            border: 2px dashed var(--accent-rose);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .progress-title { font-size: 1.05rem; font-weight: 700; color: var(--choco-dark); }
+        .progress-subtitle { font-size: 0.83rem; color: var(--text-muted); }
+        .progress-percentage { font-size: 1.5rem; font-weight: 800; color: var(--choco-dark); }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 14px;
+            background-color: #EFE5DF;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--choco-dark), var(--accent-rose));
+            width: 0%;
+            border-radius: 20px;
+            transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .progress-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.55rem;
+            font-size: 0.83rem;
+            font-weight: 600;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* KPI CARDS */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .kpi-card {
+            background: var(--cream-card);
+            border: 1px solid var(--cream-border);
+            border-radius: 14px;
+            padding: 1.1rem 1.3rem;
+            box-shadow: 0 2px 10px rgba(59, 24, 14, 0.03);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 4px;
+            background-color: var(--choco-dark);
+        }
+        .kpi-card.rose::before { background-color: var(--accent-rose); }
+        .kpi-card.green::before { background-color: #10B981; }
+        .kpi-card.red::before { background-color: #EF4444; }
+        .kpi-card.amber::before { background-color: #F59E0B; }
+
+        .kpi-title {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .kpi-value { font-size: 1.55rem; font-weight: 800; color: var(--choco-dark); }
+        .kpi-sub { font-size: 0.76rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+        /* CARDS & WORKSPACE */
+        .card {
+            background: var(--cream-card);
+            border: 1px solid var(--cream-border);
+            border-radius: 16px;
+            padding: 1.45rem;
+            box-shadow: 0 4px 20px rgba(59, 24, 14, 0.04);
+        }
+
+        .card-header {
+            margin-bottom: 1.15rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--cream-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .card-header h2 { font-size: 1.08rem; color: var(--choco-dark); font-weight: 700; }
+
+        .dashboard-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.4rem;
+            margin-bottom: 1.4rem;
+        }
+
+        @media (max-width: 900px) {
+            .dashboard-grid-2 { grid-template-columns: 1fr; }
+        }
+
+        .workspace {
+            display: grid;
+            grid-template-columns: 405px 1fr;
+            gap: 1.6rem;
+            align-items: start;
+        }
+
+        @media (max-width: 980px) {
+            .workspace { grid-template-columns: 1fr; }
+        }
+
+        /* FORMS */
+        .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+        .form-group { margin-bottom: 0.9rem; }
+
+        label {
+            display: block;
+            font-size: 0.81rem;
+            font-weight: 600;
+            color: var(--choco-dark);
+            margin-bottom: 0.28rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.65rem 0.82rem;
+            border: 1.5px solid var(--cream-border);
+            border-radius: 10px;
+            font-size: 0.88rem;
+            color: var(--text-main);
+            background-color: #FFFCFA;
+            transition: all 0.2s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--choco-dark);
+            box-shadow: 0 0 0 3px rgba(59, 24, 14, 0.08);
+            background-color: #FFFFFF;
+        }
+
+        .product-adder-row { display: flex; gap: 0.45rem; }
+
+        .btn-add-item {
+            background-color: var(--accent-rose);
+            color: #FFFFFF;
+            border: none;
+            border-radius: 10px;
+            padding: 0 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .form-checklist {
+            list-style: none;
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .form-checklist li {
+            background: #FCF7F4;
+            border: 1px solid var(--cream-border);
+            border-radius: 8px;
+            padding: 0.4rem 0.68rem;
+            font-size: 0.83rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-checklist li button {
+            background: none;
+            border: none;
+            color: #DC2626;
+            font-weight: 800;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        /* MULTI-RECEIPTS UPLOAD */
+        .receipt-box {
+            border: 1.5px dashed var(--cream-border);
+            background: #FCF9F7;
+            border-radius: 12px;
+            padding: 0.75rem;
+            text-align: center;
+        }
+
+        .receipt-box input[type="file"] {
+            border: none;
+            background: transparent;
+            padding: 0.15rem 0;
+            font-size: 0.79rem;
+        }
+
+        .receipts-gallery-form {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0.55rem;
+        }
+
+        .thumb-chip {
+            position: relative;
+            width: 54px;
+            height: 54px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--cream-border);
+        }
+
+        .thumb-chip img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .thumb-chip button {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            background: rgba(153, 27, 27, 0.9);
+            color: white;
+            border: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .btn-primary {
+            width: 100%;
+            background-color: var(--choco-dark);
+            color: #FFFFFF;
+            border: none;
+            padding: 0.85rem;
+            border-radius: 10px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 0.3rem;
+        }
+        .btn-primary:hover { background-color: var(--choco-medium); }
+
+        .btn-secondary {
+            width: 100%;
+            background-color: var(--accent-rose);
+            color: #FFFFFF;
+            border: none;
+            padding: 0.85rem;
+            border-radius: 10px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 0.3rem;
+        }
+
+        .btn-cancel {
+            width: 100%;
+            background-color: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--cream-border);
+            padding: 0.6rem;
+            border-radius: 10px;
+            font-size: 0.83rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 0.45rem;
+            display: none;
+        }
+
+        /* INVENTORY SUB TABS */
+        .sub-nav {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid var(--cream-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .sub-tab-btn {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .sub-tab-btn.active {
+            background-color: var(--choco-dark);
+            color: white;
+        }
+
+        /* TABLE & CHECKLIST PROGRESS */
+        .controls-bar {
+            display: flex;
+            gap: 0.7rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .search-input { flex: 1; min-width: 190px; }
+        .filter-select { width: auto; min-width: 165px; }
+
+        .table-responsive { overflow-x: auto; }
+
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+
+        th {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            padding: 0.75rem 0.75rem;
+            border-bottom: 2px solid var(--cream-border);
+            font-weight: 700;
+        }
+
+        td {
+            padding: 0.85rem 0.75rem;
+            border-bottom: 1px solid var(--cream-border);
+            font-size: 0.87rem;
+            vertical-align: top;
+        }
+
+        tr:hover td { background-color: #FCF9F7; }
+
+        .client-name {
+            font-weight: 700;
+            color: var(--choco-dark);
+            font-size: 0.94rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .client-phone {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .order-checklist {
+            list-style: none;
+            margin-top: 0.4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.28rem;
+        }
+
+        .order-checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.82rem;
+            color: var(--text-main);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .order-checklist-item input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            accent-color: var(--choco-dark);
+            cursor: pointer;
+            margin: 0;
+            flex-shrink: 0;
+        }
+
+        .order-checklist-item.checked span {
+            text-decoration: line-through;
+            color: var(--text-muted);
+        }
+
+        .mini-prod-bar-wrap {
+            margin-top: 0.45rem;
+            max-width: 230px;
+        }
+
+        .mini-prod-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.71rem;
+            font-weight: 700;
+            color: var(--choco-dark);
+            margin-bottom: 2px;
+        }
+
+        .mini-prod-bg {
+            width: 100%;
+            height: 6px;
+            background: #EFE5DF;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .mini-prod-fill {
+            height: 100%;
+            background: #10B981;
+            transition: width 0.3s ease;
+        }
+
+        /* BADGES & SELECTS */
+        .status-select {
+            padding: 0.32rem 0.55rem;
+            border-radius: 16px;
+            font-size: 0.76rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            width: auto;
+        }
+
+        .st-pendiente { background: var(--st-pendiente-bg); color: var(--st-pendiente-txt); }
+        .st-produccion { background: var(--st-produccion-bg); color: var(--st-produccion-txt); }
+        .st-listo { background: var(--st-listo-bg); color: var(--st-listo-txt); }
+        .st-entregado { background: var(--st-entregado-bg); color: var(--st-entregado-txt); }
+        .st-cancelado { background: var(--st-cancelado-bg); color: var(--st-cancelado-txt); }
+
+        .pay-badge {
+            display: inline-block;
+            padding: 0.22rem 0.6rem;
+            border-radius: 14px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+        .pay-sin { background: var(--pay-sin-bg); color: var(--pay-sin-txt); }
+        .pay-parcial { background: var(--pay-parcial-bg); color: var(--pay-parcial-txt); }
+        .pay-pagado { background: var(--pay-pagado-bg); color: var(--pay-pagado-txt); }
+
+        .badge-cat {
+            display: inline-block;
+            padding: 0.25rem 0.65rem;
+            border-radius: 14px;
+            font-size: 0.74rem;
+            font-weight: 700;
+            background-color: #F3EAE4;
+            color: var(--choco-dark);
+        }
+
+        .date-urgent { color: #991B1B; font-weight: 700; font-size: 0.81rem; }
+        .date-normal { color: var(--text-main); font-size: 0.83rem; }
+
+        .actions { display: flex; gap: 0.32rem; align-items: center; flex-wrap: wrap; }
+
+        .btn-icon {
+            background: none;
+            border: 1px solid var(--cream-border);
+            border-radius: 8px;
+            padding: 0.36rem 0.55rem;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            transition: all 0.2s;
+            font-weight: 600;
+        }
+
+        .btn-icon:hover {
+            border-color: var(--choco-dark);
+            color: var(--choco-dark);
+            background-color: var(--cream-bg);
+        }
+
+        .btn-icon.abono-btn {
+            border-color: #10B981;
+            color: #065F46;
+            background: #ECFDF5;
+        }
+
+        .btn-icon.receipt-btn {
+            border-color: #D98A7C;
+            color: var(--choco-dark);
+            background-color: #FFF7F5;
+        }
+
+        .btn-icon.delete:hover {
+            border-color: #DC2626;
+            color: #DC2626;
+            background-color: #FEF2F2;
+        }
+
+        /* FILAMENTOS & MATERIALES CARDS */
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .inv-card {
+            border: 1.5px solid var(--cream-border);
+            border-radius: 14px;
+            padding: 1.1rem;
+            background: #FFFCFA;
+            position: relative;
+        }
+
+        .inv-card.low-stock {
+            border-color: #EF4444;
+            background: #FEF2F2;
+        }
+
+        .low-stock-tag {
+            background: #EF4444;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 0.18rem 0.55rem;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 0.4rem;
+        }
+
+        .spool-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid rgba(0,0,0,0.2);
+            vertical-align: middle;
+        }
+
+        .qty-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: 0.6rem;
+        }
+
+        .btn-qty {
+            background: #F3EAE4;
+            border: 1px solid var(--cream-border);
+            color: var(--choco-dark);
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            font-weight: 800;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-qty:hover {
+            background: var(--choco-dark);
+            color: white;
+        }
+
+        /* CALENDARIO */
+        .cal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .cal-legend {
+            display: flex;
+            gap: 0.85rem;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+        }
+
+        .cal-legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-weight: 600;
+        }
+
+        .dot-l { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.45rem;
+        }
+
+        .cal-day-name {
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            padding: 0.4rem 0;
+            text-transform: uppercase;
+        }
+
+        .cal-cell {
+            min-height: 105px;
+            border: 1px solid var(--cream-border);
+            border-radius: 10px;
+            padding: 0.45rem;
+            background: #FFFCFA;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .cal-cell.empty { background: transparent; border: none; }
+        .cal-cell.today { border: 2px solid var(--choco-dark); background: #FFF8F5; }
+        .cal-cell.overload { background: #FFF1F2; border-color: #FDA4AF; }
+
+        .cal-cell-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--choco-dark);
+        }
+
+        .overload-badge {
+            background: #E11D48;
+            color: white;
+            font-size: 0.64rem;
+            padding: 1px 5px;
+            border-radius: 6px;
+        }
+
+        .cal-event {
+            font-size: 0.71rem;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+        }
+
+        .ev-overdue { background: #FEE2E2; color: #991B1B; }
+        .ev-delivery { background: #FEF3C7; color: #92400E; }
+        .ev-prod { background: #E0E7FF; color: #3730A3; }
+        .ev-done { background: #D1FAE5; color: #065F46; }
+
+        /* REPORTES SVG CHARTS */
+        .chart-box {
+            width: 100%;
+            overflow-x: auto;
+            padding-top: 0.5rem;
+        }
+
+        .bar-row {
+            margin-bottom: 0.75rem;
+        }
+
+        .bar-row-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 0.22rem;
+        }
+
+        .bar-track {
+            width: 100%;
+            height: 11px;
+            background: #EFE5DF;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 8px;
+            transition: width 0.5s ease;
+        }
+
+        /* MODALS */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(44, 18, 10, 0.72);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1.2rem;
+            z-index: 1000;
+        }
+
+        .modal-overlay.open { display: flex; }
+
+        .modal-card {
+            background: #FFFFFF;
+            border-radius: 18px;
+            max-width: 560px;
+            width: 100%;
+            padding: 1.5rem;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.28);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.7rem;
+            border-bottom: 1px solid var(--cream-border);
+        }
+
+        .modal-header h3 { font-size: 1.05rem; color: var(--choco-dark); }
+
+        .btn-close-modal {
+            background: var(--cream-bg);
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            cursor: pointer;
+            color: var(--choco-dark);
+            font-weight: 700;
+        }
+
+        .abono-list-modal {
+            list-style: none;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+
+        .abono-list-modal li {
+            background: #FCF9F7;
+            border: 1px solid var(--cream-border);
+            padding: 0.55rem 0.8rem;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .receipts-modal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .receipts-modal-grid img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid var(--cream-border);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAAD5CAYAAABMO1sEAABnY0lEQVR42u2dd9xO9f/Hn2dce9zT3itUVikzmRFCQyql0h5SkqRSUREioVTSpiUaSkrKKCshhGRv97z2Ouf8/jjnurpvbiPx/ZHzejzuyH1dZ35en/d+v4WmZdM1TJgw8T+BaD4CEyZMwpkwYRLOhAkTJuFMmDAJZ8KECZNwJkyYhDNhwiScCRMmTMKZMGESzoQJEybhTJgwCWfChEk4EyZMmIQzYcIknAkTJkzCmTBhEs6ECRMm4UyYMAlnwoRJOBMmTJiEM2HCJJwJEyZMwpkwYRLOhAmTcCZMmDAJZ8LEfwbySWWvJCGYz9TEGQxV09BU9fQnnKZp+AsKUBIKCIA5scDEmYLkehXA7nBgtdlOb8JpmoZssdD73n6ULl+BRCJhSDpT3pk4E/C3dFgyfx5rli9FkuRTIjWEfzs9RxAE4rEYZSpU5N3vfmLB3DmEAwFESTLFnIkzQ8AJAtFohErVauBJS+e+q69AEAQQBNBO7ho+aRJOlCR279jOC4/0Jy+nEIvlpF+rCROnBKIoEAhpNLnkIh4bPf6U6mUn1WkiyzJpmVloGlgsFjSTcSbOCMKJWKw+vGnpp9RhctIJB6AqCoqiIIqiSTgTZ4YFp2koioKqqroaeSrJbT5uEyb+h9LUfAQmTJiEM2HCJJwJEyZMwpkwYRLOhAkTJuFMmDAJZ8KESTgTJkycdMjmIzBxvEgm9Aro2RlmJpFJOBOniGiiKBKLxVCVBIqiYLPbkS1WlETCfEAm4UycNJtDFInHY4SDQcpWrIQnLR23N40tG/4gPyeHtMxMXdKZ0s4knIl/B0mSCAeDZJYqzW0PD+bKm26hVNlyCKLI3p07eP2F5/li2rt6hfQpqB0zCWfin+piqdqqU23vJNW+w7LdDVvrn9pckiQR8PuoVrsuY9/7iGq16wCw/reVzJ/9OS3ad+SpiZOpVL06E4YNxeFymTadSbj/LzVMAkEvVUokEiAIyLKMKIqnpEmNKIokEgkCvkIURU0JGgEQJRHZImOzO5BkGVVRjn08SSIY8FPtnDqMnz6DyjVqsnHtGiY+M5TF339LNBJh4rBhPPnyBPoOGMSKRQv4+fu5uDxeVFUxF4BJuP8R0SQJTVUJ+n1omobT7SazVGkUJUF+Tg7RSASr3Ybd7tBrr04S2SLhEE63h2433ETDps1xuT0gQCIeZ82yJaxYvJCtGzcQ8BXqvzuKxBVEkWg4TIWq1Rn/0WdUrl6TpT/NZ9DN15Ofm4vb48HtTSPo9/Hha6/Qs+8d3HBPP37+fi5mSw2TcP8jzVFAEAQCvkKsVhuXdLizationp3uu6p51Uu3o11fM/vQLf9up19s11J16/F1+0v15e+e+e2e2l6tW6X83uJ+lZ1+3vG13tF39m3W/J+pZ36n87d/9Jp2e5bL8a3w1+u3w1/9m0X794d//Npz1s2621W9/L1/f2/T2/Z/13b/2b/9+X83n62+1v/Vn7/4d2b/07p+W/w2+/7fT7Vvp9v327v9n/1d/1j9/2u3399/w7d76f/j67X0f14/X36b1N6v//3e/e2f3d/c1+q1/W/4172e/T++/6h+N+f34e/vvdNvv7Wz3d3q/3Z/55+1b51//b/9d3l90v51/V3+fvdNtt//6x/d9N3q9//7P3d/c8f6+L++2/V/u33e/5l/3f0u5d7e/1l8zNzc3/w/2e+WvF+/eXv9l///e32e339Z/N8/v1/931j0l8+0e2e9vdnd3d7T0z++u+u31n/7ff9rf7rf970u21+/X3zX2731/f/aX+u323t/vv73P233N75/f0d7e7+nvb+nv/W3d/f+3x3T/3/N6l/3r913a/vd5T/d79rf6v/25/3/b+/rve+/uX/bf6u/V///z6x3x7/7vf3v+67m1/z///ff4d9x7b/x/1e4b9u/f7v/2++W/x//7//7e+vf///vf+/vvff4d/3d3d/3e/N3+f9/l/t///3f/76193/9/v/V+rf+u//7b/7+/e2f3d9n///v8A+3/t31xN3d///z08AAB4nO3dfZzdY/n/8dc1bbfbXl1t/f12e821McbGMGPsGOMY27jGMsbG2G2xMSb+GKMxxhi7iLExxhhbGGPMmBhj7N+x/32u7n3m6d5n5pznfJ49/zxr18+r931d5/X8vJ6fa6291/U8P1/38/W83+s6r2vnv/Z+r+9+fr9/f///w7+l3d/vf3n/t9/+8f87v+v97v/q+//u+6+/b8/+/847b+y+s21n/n7v886vve9zNvd8j//Ld1/b69rvvP6e9z//+/vfH9/f+3/987v+//v9v+72+/t/H9737+z+//vf+/u+//bvv//u37v+n3v/7//2z+3+b+/3vff++/77/m///e+//e/+3f+/35vv+7P3+/1+//v/b///vv++b75v/vf+v+//vve773vv+/vf973vff/73/++/3vf+/73//r3+9///vf///v//9r33v+//vf973/v+//++/7vv/23///v/+///ff/+/f+t/++v/7e/++//vf///v+//3/+//vf//7//e973v+/73/+//9///93/vv++/+//3//73//vv/973/f973/ff973vv/+/73///f/+vv73/ff///u///v+//vf///v++/7vvf+/77/++/++/+//73//u+973vvf+///e973//3f++73ve9/7ve/7vv/2////d///vff9977vv///vvfe+77vvv++//773vve///vff//vv//3/+//3v+///7vvfe+9/vvfe+73ve///vvfe+973/++/3v++/73vv++/7/vvfe99///3vv++/73ve///vve++9773/++/3ve///vf///v//++/7vvv++9977vve+973vvfe+77v/e+9733v/+973/++/73v++/3vff/9773vvf++73ve///vv/e+/73vf///f++73vve///vv++/773v//3f///vffe+973vv//f+///7///+e+9733ve9///973//dff/93ff/+99773vf/+9977/++/++/vvf+99/33ff//77v//f///+/v/+//3vf973vvff///ve/73vf//f//++/7vv/e/7733//3f//++/vv//f///+b/87u+/++/vv/+/7///3+c1v+/7b/+9///v/+//++/7vvf+977/++/973/ff++7/+f+9/3v//ff++/7/v/f/+/v///vf+/733//3ff/+9773vf//d/7/+//3vvfe+...
+                <div class="brand-text">
+                    <h1>Mibes <span class="by-founders">by Michael y Siberley</span></h1>
+                    <p>Solo falta una idea y mucho amor &hearts; Control completo de pedidos, materiales y finanzas</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button type="button" class="btn-header" onclick="exportAllCSV()">&#128229; Excel (CSV)</button>
+                <button type="button" class="btn-header" onclick="exportBackupJSON()">&#128190; Respaldo</button>
+                <label class="btn-header" style="margin:0; cursor:pointer;">
+                    &#128194; Restaurar
+                    <input type="file" id="restore-file" accept=".json" style="display:none;" onchange="importBackupJSON(event)">
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-tabs">
+        <button type="button" id="btn-tab-dashboard" class="tab-btn active" onclick="switchTab('dashboard')">
+            &#127968; Panel Principal
+        </button>
+        <button type="button" id="btn-tab-orders" class="tab-btn" onclick="switchTab('orders')">
+            &#128230; Pedidos y Abonos
+        </button>
+        <button type="button" id="btn-tab-inventory" class="tab-btn" onclick="switchTab('inventory')">
+            &#129525; Filamentos y Materiales <span id="low-inv-badge" class="nav-alert-dot">0</span>
+        </button>
+        <button type="button" id="btn-tab-calendar" class="tab-btn" onclick="switchTab('calendar')">
+            &#128197; Calendario
+        </button>
+        <button type="button" id="btn-tab-expenses" class="tab-btn" onclick="switchTab('expenses')">
+            &#128184; Gastos e Inversión
+        </button>
+        <button type="button" id="btn-tab-reports" class="tab-btn" onclick="switchTab('reports')">
+            &#128202; Reportes Financieros
+        </button>
+    </nav>
+
+    <main>
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 1: PANEL PRINCIPAL                                -->
+        <!-- ========================================================= -->
+        <div id="tab-dashboard" class="tab-section active">
+            <section class="investment-banner">
+                <div class="mascot-container" title="Mascotita Mibes">
+                    <svg viewBox="0 0 120 120" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="25" y1="22" x2="18" y2="14" stroke="#3B180E" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="36" y1="16" x2="34" y2="7" stroke="#3B180E" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M96 22 C96 17, 103 17, 103 22 C103 17, 110 17, 110 22 C110 28, 103 33, 103 33 C103 33, 96 28, 96 22 Z" fill="none" stroke="#3B180E" stroke-width="2.5"/>
+                        <path d="M48 86 L43 102" stroke="#3B180E" stroke-width="3.5" stroke-linecap="round"/>
+                        <ellipse cx="40" cy="104" rx="7" ry="4" fill="#FFF" stroke="#3B180E" stroke-width="3"/>
+                        <path d="M74 86 L79 102" stroke="#3B180E" stroke-width="3.5" stroke-linecap="round"/>
+                        <ellipse cx="82" cy="104" rx="7" ry="4" fill="#FFF" stroke="#3B180E" stroke-width="3"/>
+                        <path d="M26 65 Q14 68 18 78" fill="none" stroke="#3B180E" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M94 65 Q106 68 102 78" fill="none" stroke="#3B180E" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M26 72 C18 55, 28 28, 43 32 C51 34, 52 50, 56 50 C60 50, 63 26, 75 28 C87 30, 84 52, 88 52 C92 52, 99 36, 106 42 C113 48, 104 78, 86 86 C68 93, 35 90, 26 72 Z" fill="#FFFFFF" stroke="#3B180E" stroke-width="4.5" stroke-linejoin="round"/>
+                        <path d="M29 52 C27 38, 35 31, 43 33 C49 35, 51 48, 56 48 C61 48, 64 28, 75 29 C84 30, 83 48, 88 48 C93 48, 99 38, 105 43" fill="none" stroke="#562618" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="48" cy="66" r="2.8" fill="#3B180E"/>
+                        <circle cx="74" cy="66" r="2.8" fill="#3B180E"/>
+                        <path d="M57 67 Q61 72 65 67" fill="none" stroke="#3B180E" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="39" y1="70" x2="42" y2="68" stroke="#D98A7C" stroke-width="2.2" stroke-linecap="round"/>
+                        <line x1="80" y1="70" x2="83" y2="68" stroke="#D98A7C" stroke-width="2.2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="progress-header">
+                        <div>
+                            <div class="progress-title" id="recovery-headline">Progreso de Recuperación de Inversión</div>
+                            <div class="progress-subtitle" id="recovery-message">Calculado con base en abonos reales recibidos (independiente del estado de entrega).</div>
+                        </div>
+                        <div class="progress-percentage" id="recovery-percent">0%</div>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="recovery-bar"></div>
+                    </div>
+                    <div class="progress-footer">
+                        <span style="color: #065F46;" id="label-collected">Cobrado Real: $0.00</span>
+                        <span style="color: #991B1B;" id="label-remaining">Falta por recuperar: $0.00</span>
+                        <span style="color: var(--choco-dark);" id="label-invested">Inversión Total: $0.00</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="kpi-grid">
+                <div class="kpi-card green">
+                    <div class="kpi-title">Ventas del Mes Actual</div>
+                    <div class="kpi-value" id="dash-month-sales">$0.00</div>
+                    <div class="kpi-sub" id="dash-month-sales-sub">0 pedidos este mes</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Ganancia Estimada (Mes)</div>
+                    <div class="kpi-value" id="dash-month-profit">$0.00</div>
+                    <div class="kpi-sub">Ventas del mes menos gastos del mes</div>
+                </div>
+                <div class="kpi-card amber">
+                    <div class="kpi-title">Pedidos Activos / Pendientes</div>
+                    <div class="kpi-value" id="dash-active-orders">0</div>
+                    <div class="kpi-sub" id="dash-pending-balance">Por cobrar: $0.00</div>
+                </div>
+                <div class="kpi-card red">
+                    <div class="kpi-title">Gastos del Mes Actual</div>
+                    <div class="kpi-value" id="dash-month-expenses">$0.00</div>
+                    <div class="kpi-sub" id="dash-month-expenses-sub">0 registros este mes</div>
+                </div>
+            </section>
+
+            <div class="dashboard-grid-2">
+                <section class="card">
+                    <div class="card-header">
+                        <h2>&#9200; Entregas Próximas y Urgentes</h2>
+                        <button type="button" class="btn-icon" onclick="switchTab('orders')">Ver todos &rarr;</button>
+                    </div>
+                    <div id="dash-upcoming-list"></div>
+                </section>
+
+                <section class="card">
+                    <div class="card-header">
+                        <h2>&#127942; Productos Más Vendidos</h2>
+                        <span style="font-size:0.78rem; color:var(--text-muted);">Top artículos pedidos</span>
+                    </div>
+                    <div id="dash-top-products"></div>
+                </section>
+            </div>
+
+            <section class="card" id="dash-inventory-alert-card" style="display:none; border-color:#EF4444; background:#FEF2F2;">
+                <div class="card-header" style="border-bottom-color:#FECACA;">
+                    <h2 style="color:#991B1B;">&#9888;&#65039; Alerta de Filamentos o Insumos Bajo Stock</h2>
+                    <button type="button" class="btn-icon" onclick="switchTab('inventory')">Ir a Inventario &rarr;</button>
+                </div>
+                <div id="dash-low-inventory-list" style="display:flex; gap:0.8rem; flex-wrap:wrap;"></div>
+            </section>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 2: PEDIDOS, CHECKLIST Y MULTI-ABONOS              -->
+        <!-- ========================================================= -->
+        <div id="tab-orders" class="tab-section">
+            <div class="workspace">
+                <section class="card">
+                    <div class="card-header">
+                        <h2 id="order-form-title">Nuevo Pedido</h2>
+                    </div>
+                    <form id="order-form">
+                        <input type="hidden" id="order-id">
+                        
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="client">Cliente *</label>
+                                <input type="text" id="client" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="client-phone">Teléfono / Contacto</label>
+                                <input type="text" id="client-phone" placeholder="Ej. 099 123 4567 / @ig">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-input">Productos Adquiridos (Checklist) *</label>
+                            <div class="product-adder-row">
+                                <input type="text" id="product-input" placeholder="Ej. Figura 3D, caja..." onkeydown="handleProductEnter(event)">
+                                <button type="button" class="btn-add-item" onclick="addProductToForm()">+ Añadir</button>
+                            </div>
+                            <ul class="form-checklist" id="form-product-list"></ul>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="price">Precio Total ($) *</label>
+                                <input type="number" id="price" step="0.01" min="0" placeholder="0.00" required>
+                            </div>
+                            <div class="form-group" id="initial-deposit-group">
+                                <label for="deposit">Abono Inicial ($)</label>
+                                <input type="number" id="deposit" step="0.01" min="0" placeholder="0.00">
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="prodDate">Fecha de Producción</label>
+                                <input type="date" id="prodDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="deliveryDate">Fecha de Entrega *</label>
+                                <input type="date" id="deliveryDate" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="order-status-select">Estado del Pedido</label>
+                            <select id="order-status-select">
+                                <option value="pendiente">&#9203; Pendiente</option>
+                                <option value="produccion">&#9881;&#65039; En producción</option>
+                                <option value="listo">&#10024; Listo para entrega</option>
+                                <option value="entregado">&#10004; Entregado</option>
+                                <option value="cancelado">&#10060; Cancelado</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Notas / Dedicatoria / Especificaciones</label>
+                            <textarea id="notes" rows="2" placeholder="Colores, mensaje, hora de entrega..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Comprobantes de Pago (Puedes subir varios)</label>
+                            <div class="receipt-box">
+                                <input type="file" id="order-receipt-input" accept="image/*" multiple onchange="handleMultiReceiptUpload(event)">
+                                <div class="receipts-gallery-form" id="order-receipts-gallery"></div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="order-submit-btn">Guardar Pedido &hearts;</button>
+                        <button type="button" class="btn-cancel" id="order-cancel-btn" onclick="cancelEditOrder()">Cancelar edición</button>
+                    </form>
+                </section>
+
+                <section class="card">
+                    <div class="card-header">
+                        <h2>Agenda de Pedidos</h2>
+                        <span style="font-size:0.76rem; color:var(--text-muted);">El estado de entrega y el pago son independientes</span>
+                    </div>
+
+                    <div class="controls-bar">
+                        <input type="text" id="search-order" class="search-input" placeholder="Buscar cliente, teléfono o producto...">
+                        <select id="filter-status" class="filter-select">
+                            <option value="all">Todos los estados</option>
+                            <option value="pendiente">Pendiente</option>
+                            <option value="produccion">En producción</option>
+                            <option value="listo">Listo</option>
+                            <option value="entregado">Entregado</option>
+                            <option value="cancelado">Cancelado</option>
+                        </select>
+                        <select id="filter-payment" class="filter-select">
+                            <option value="all">Todos los pagos</option>
+                            <option value="debt">Con saldo pendiente</option>
+                            <option value="paid">Pagados 100%</option>
+                        </select>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Cliente y Checklist</th>
+                                    <th>Fechas</th>
+                                    <th>Pagos y Saldo</th>
+                                    <th>Estado Entrega</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="orders-tbody"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 3: INVENTARIO DE FILAMENTOS Y MATERIALES          -->
+        <!-- ========================================================= -->
+        <div id="tab-inventory" class="tab-section">
+            <div class="sub-nav">
+                <button type="button" id="btn-sub-filaments" class="sub-tab-btn active" onclick="switchSubInventory('filaments')">&#129525; Filamentos 3D (en gramos)</button>
+                <button type="button" id="btn-sub-materials" class="sub-tab-btn" onclick="switchSubInventory('materials')">&#128230; Materiales Generales e Insumos</button>
+            </div>
+
+            <!-- VISTA SUB 1: FILAMENTOS 3D -->
+            <div id="sub-inv-filaments" class="workspace">
+                <section class="card">
+                    <div class="card-header">
+                        <h2 id="fil-form-title">Registrar Bobina de Filamento</h2>
+                    </div>
+                    <form id="filament-form">
+                        <input type="hidden" id="fil-id">
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="fil-type">Tipo de Material *</label>
+                                <select id="fil-type">
+                                    <option value="PLA">PLA</option>
+                                    <option value="PLA+">PLA+</option>
+                                    <option value="PLA Silk">PLA Silk</option>
+                                    <option value="PETG">PETG</option>
+                                    <option value="ABS">ABS</option>
+                                    <option value="TPU Flexible">TPU Flexible</option>
+                                    <option value="Resina">Resina</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="fil-brand">Marca *</label>
+                                <input type="text" id="fil-brand" placeholder="Ej. eSUN, Sunlu, Creality" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="fil-color-name">Nombre del Color *</label>
+                                <input type="text" id="fil-color-name" placeholder="Ej. Blanco Nieve, Rosa Pastel" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fil-color-hex">Muestra de Color</label>
+                                <input type="color" id="fil-color-hex" value="#D98A7C" style="height:41px; padding:3px;">
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="fil-weight">Peso Actual (gramos) *</label>
+                                <input type="number" id="fil-weight" min="0" step="1" placeholder="1000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fil-min-alert">Alerta Mínimo (g) *</label>
+                                <input type="number" id="fil-min-alert" min="0" step="10" value="200" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="fil-submit-btn">Guardar Filamento</button>
+                        <button type="button" class="btn-cancel" id="fil-cancel-btn" onclick="cancelEditFilament()">Cancelar edición</button>
+                    </form>
+                </section>
+
+                <section class="card">
+                    <div class="card-header">
+                        <h2>Inventario de Filamentos</h2>
+                        <span style="font-size:0.78rem; color:var(--text-muted);">Descuenta gramos consumidos tras imprimir</span>
+                    </div>
+                    <div class="inventory-grid" id="filaments-grid"></div>
+                </section>
+            </div>
+
+            <!-- VISTA SUB 2: MATERIALES GENERALES E INSUMOS -->
+            <div id="sub-inv-materials" class="workspace" style="display:none;">
+                <section class="card">
+                    <div class="card-header">
+                        <h2 id="mat-form-title">Registrar Material / Insumo</h2>
+                    </div>
+                    <form id="material-form">
+                        <input type="hidden" id="mat-id">
+                        <div class="form-group">
+                            <label for="mat-name">Nombre del Insumo *</label>
+                            <input type="text" id="mat-name" placeholder="Ej. Cajas 15x15, Cinta de regalo, Luces LED" required>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="mat-category">Categoría</label>
+                                <select id="mat-category">
+                                    <option value="Empaque y Cajas">Empaque y Cajas</option>
+                                    <option value="Cintas y Lazos">Cintas y Lazos</option>
+                                    <option value="Pegamentos y Adhesivos">Pegamentos y Adhesivos</option>
+                                    <option value="Tarjetas y Papelería">Tarjetas y Papelería</option>
+                                    <option value="Luces y Complementos">Luces y Complementos</option>
+                                    <option value="Herramientas / Repuestos">Herramientas / Repuestos</option>
+                                    <option value="Otro Insumo">Otro Insumo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mat-unit">Unidad de Medida *</label>
+                                <input type="text" id="mat-unit" placeholder="Ej. Unidades, Rollos, Metros, Packs" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="mat-qty">Cantidad Actual *</label>
+                                <input type="number" id="mat-qty" min="0" step="1" placeholder="50" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mat-min-alert">Alerta Mínimo *</label>
+                                <input type="number" id="mat-min-alert" min="0" step="1" value="5" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="mat-submit-btn">Guardar Insumo</button>
+                        <button type="button" class="btn-cancel" id="mat-cancel-btn" onclick="cancelEditMaterial()">Cancelar edición</button>
+                    </form>
+                </section>
+
+                <section class="card">
+                    <div class="card-header">
+                        <h2>Inventario de Materiales e Insumos</h2>
+                        <span style="font-size:0.78rem; color:var(--text-muted);">Botones +1 y -1 para actualización rápida</span>
+                    </div>
+                    <div class="inventory-grid" id="materials-grid"></div>
+                </section>
+            </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 4: CALENDARIO MENSUAL DE PRODUCCIÓN Y ENTREGAS    -->
+        <!-- ========================================================= -->
+        <div id="tab-calendar" class="tab-section">
+            <section class="card">
+                <div class="cal-header">
+                    <div style="display:flex; align-items:center; gap:0.8rem;">
+                        <button type="button" class="btn-icon" onclick="changeCalMonth(-1)">&larr; Anterior</button>
+                        <h2 id="cal-month-title" style="min-width:185px; text-align:center; text-transform:capitalize;">Mes Año</h2>
+                        <button type="button" class="btn-icon" onclick="changeCalMonth(1)">Siguiente &rarr;</button>
+                    </div>
+                    <div class="cal-legend">
+                        <span><i class="dot-l" style="background:#EF4444;"></i> Atrasado</span>
+                        <span><i class="dot-l" style="background:#F59E0B;"></i> Entrega</span>
+                        <span><i class="dot-l" style="background:#6366F1;"></i> Producción</span>
+                        <span><i class="dot-l" style="background:#10B981;"></i> Entregado</span>
+                        <span><i class="dot-l" style="background:#E11D48;"></i> Día cargado (3+ entregas)</span>
+                    </div>
+                </div>
+                <div class="calendar-grid" id="calendar-grid"></div>
+            </section>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 5: GASTOS E INVERSIÓN (CON EDICIÓN)               -->
+        <!-- ========================================================= -->
+        <div id="tab-expenses" class="tab-section">
+            <div class="workspace">
+                <section class="card">
+                    <div class="card-header">
+                        <h2 id="exp-form-title">Registrar Gasto / Inversión</h2>
+                    </div>
+                    <form id="expense-form">
+                        <input type="hidden" id="exp-id">
+                        <div class="form-group">
+                            <label for="exp-desc">¿En qué se gastó? *</label>
+                            <input type="text" id="exp-desc" placeholder="Ej. Filamentos PLA, cajas, impresión..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exp-category">Categoría</label>
+                            <select id="exp-category">
+                                <option value="Filamentos y Resinas 3D">Filamentos y Resinas 3D</option>
+                                <option value="Materiales / Insumos">Materiales / Insumos</option>
+                                <option value="Empaque y Presentación">Empaque y Presentación</option>
+                                <option value="Equipos / Repuestos 3D">Equipos / Repuestos 3D</option>
+                                <option value="Publicidad / Envío">Publicidad / Envío</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="exp-amount">Valor ($) *</label>
+                                <input type="number" id="exp-amount" step="0.01" min="0" placeholder="0.00" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exp-date">Fecha *</label>
+                                <input type="date" id="exp-date" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Comprobante / Factura (Opcional)</label>
+                            <div class="receipt-box">
+                                <input type="file" id="expense-receipt-input" accept="image/*" onchange="handleExpenseReceiptUpload(event)">
+                                <div class="receipts-gallery-form" id="expense-receipt-preview-wrap" style="display:none;">
+                                    <div class="thumb-chip">
+                                        <img id="expense-receipt-thumb" alt="Vista previa">
+                                        <button type="button" onclick="clearExpenseReceipt()">&times;</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-secondary" id="exp-submit-btn">+ Añadir a Inversión</button>
+                        <button type="button" class="btn-cancel" id="exp-cancel-btn" onclick="cancelEditExpense()">Cancelar edición</button>
+                    </form>
+                </section>
+
+                <section class="card">
+                    <div class="card-header">
+                        <h2>Historial de Gastos e Inversión</h2>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Concepto</th>
+                                    <th>Categoría</th>
+                                    <th>Fecha</th>
+                                    <th>Valor</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="expenses-tbody"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 6: REPORTES FINANCIEROS                           -->
+        <!-- ========================================================= -->
+        <div id="tab-reports" class="tab-section">
+            <div class="kpi-grid">
+                <div class="kpi-card green">
+                    <div class="kpi-title">Ingresos Cobrados Totales</div>
+                    <div class="kpi-value" id="rep-total-income">$0.00</div>
+                    <div class="kpi-sub">Dinero real ingresado por abonos</div>
+                </div>
+                <div class="kpi-card red">
+                    <div class="kpi-title">Gastos / Inversión Total</div>
+                    <div class="kpi-value" id="rep-total-expense">$0.00</div>
+                    <div class="kpi-sub">Total egresos históricos</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Balance Neto Histórico</div>
+                    <div class="kpi-value" id="rep-net-balance">$0.00</div>
+                    <div class="kpi-sub">Ingresos reales menos gastos</div>
+                </div>
+                <div class="kpi-card rose">
+                    <div class="kpi-title">% Inversión Recuperada</div>
+                    <div class="kpi-value" id="rep-recovery-pct">0%</div>
+                    <div class="kpi-sub" id="rep-recovery-sub">Meta de equilibrio</div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-2">
+                <section class="card">
+                    <div class="card-header">
+                        <h2>&#128200; Ingresos vs. Gastos y Ganancias por Mes</h2>
+                    </div>
+                    <div class="chart-box" id="chart-monthly-comparison"></div>
+                </section>
+
+                <section class="card">
+                    <div class="card-header">
+                        <h2>&#128181; Distribución de Gastos por Categoría</h2>
+                    </div>
+                    <div class="chart-box" id="chart-expense-categories"></div>
+                </section>
+            </div>
+
+            <section class="card">
+                <div class="card-header">
+                    <h2>&#128717;&#65039; Ventas y Demanda por Tipo de Producto</h2>
+                </div>
+                <div class="chart-box" id="chart-product-sales"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- MODAL 1: GESTIÓN DE MULTI-ABONOS DE UN PEDIDO             -->
+    <!-- ========================================================= -->
+    <div class="modal-overlay" id="abonos-modal" onclick="closeModalOutside(event, 'abonos-modal')">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="abonos-modal-title">Historial de Abonos</h3>
+                <button type="button" class="btn-close-modal" onclick="closeModal('abonos-modal')">&times;</button>
+            </div>
+            <div id="abonos-summary-box" style="background:#FCF9F7; padding:0.75rem; border-radius:10px; margin-bottom:0.9rem; font-size:0.86rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;"></div>
+            
+            <ul class="abono-list-modal" id="abonos-modal-list"></ul>
+
+            <form id="new-abono-form" style="border-top:1px solid var(--cream-border); padding-top:0.9rem;">
+                <input type="hidden" id="abono-order-id">
+                <label style="margin-bottom:0.4rem;">Registrar Nuevo Abono / Pago:</label>
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <input type="number" id="new-abono-amount" step="0.01" min="0.01" placeholder="Monto ($)" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="new-abono-date" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="new-abono-note" placeholder="Método o nota (Ej. Transferencia Pichincha, Efectivo)">
+                </div>
+                <button type="submit" class="btn-primary">+ Registrar Abono</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- MODAL 2: VISOR DE COMPROBANTES (UNO O VARIOS)             -->
+    <!-- ========================================================= -->
+    <div class="modal-overlay" id="receipt-modal" onclick="closeModalOutside(event, 'receipt-modal')">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="receipt-modal-title">Comprobantes</h3>
+                <button type="button" class="btn-close-modal" onclick="closeModal('receipt-modal')">&times;</button>
+            </div>
+            <div class="receipts-modal-grid" id="receipts-modal-grid"></div>
+        </div>
+    </div>
+
+    <script>
+        // =========================================================
+        // ESTADO Y MIGRACIÓN SEGURA DE DATOS
+        // =========================================================
+        let orders = JSON.parse(localStorage.getItem('mibes_orders_v5')) || JSON.parse(localStorage.getItem('mibes_orders_v4')) || [];
+        let expenses = JSON.parse(localStorage.getItem('mibes_expenses_v5')) || JSON.parse(localStorage.getItem('mibes_expenses_v4')) || [];
+        let filaments = JSON.parse(localStorage.getItem('mibes_filaments_v5')) || JSON.parse(localStorage.getItem('mibes_filaments_v4')) || [];
+        let materials = JSON.parse(localStorage.getItem('mibes_materials_v5')) || [];
+
+        let tempProducts = [];
+        let currentOrderReceipts = [];
+        let currentExpenseReceipt = null;
+        let calCurrentDate = new Date();
+
+        // Inicializar fechas por defecto
+        const todayStr = new Date().toISOString().slice(0, 10);
+        document.getElementById('deliveryDate').value = todayStr;
+        document.getElementById('exp-date').value = todayStr;
+        document.getElementById('new-abono-date').value = todayStr;
+
+        // Normalizar datos de versiones anteriores automáticamente
+        function migrateData() {
+            orders.forEach(o => {
+                if (o.status === 'pending') o.status = 'pendiente';
+                if (o.status === 'completed') o.status = 'entregado';
+                if (!o.status) o.status = 'pendiente';
+
+                if (!Array.isArray(o.payments)) {
+                    o.payments = [];
+                    const initialPaid = parseFloat(o.deposit) || 0;
+                    if (initialPaid > 0) {
+                        o.payments.push({
+                            id: 'init_' + o.id,
+                            amount: initialPaid,
+                            date: o.deliveryDate || todayStr,
+                            note: 'Abono registrado'
+                        });
+                    }
+                }
+
+                if (!Array.isArray(o.receipts)) {
+                    o.receipts = o.receipt ? [o.receipt] : [];
+                }
+
+                if (!Array.isArray(o.products) || o.products.length === 0) {
+                    o.products = o.product ? [{ name: o.product, done: o.status === 'entregado' }] : [];
+                }
+            });
+        }
+        migrateData();
+
+        function saveAll() {
+            try {
+                localStorage.setItem('mibes_orders_v5', JSON.stringify(orders));
+                localStorage.setItem('mibes_expenses_v5', JSON.stringify(expenses));
+                localStorage.setItem('mibes_filaments_v5', JSON.stringify(filaments));
+                localStorage.setItem('mibes_materials_v5', JSON.stringify(materials));
+                renderAll();
+            } catch (err) {
+                alert('El almacenamiento local del navegador está lleno. Puedes descargar un "Respaldo" o borrar comprobantes viejos.');
+                renderAll();
+            }
+        }
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-section').forEach(sec => sec.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('tab-' + tabName).classList.add('active');
+            document.getElementById('btn-tab-' + tabName).classList.add('active');
+            renderAll();
+        }
+
+        function switchSubInventory(subName) {
+            document.getElementById('sub-inv-filaments').style.display = subName === 'filaments' ? 'grid' : 'none';
+            document.getElementById('sub-inv-materials').style.display = subName === 'materials' ? 'grid' : 'none';
+            document.getElementById('btn-sub-filaments').classList.toggle('active', subName === 'filaments');
+            document.getElementById('btn-sub-materials').classList.toggle('active', subName === 'materials');
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function getPaidAmount(order) {
+            if (!Array.isArray(order.payments)) return 0;
+            return order.payments.reduce((sum, p) => sum + (parseFloat(p.amount) || 0), 0);
+        }
+
+        // =========================================================
+        // CHECKLIST DE PRODUCTOS EN FORMULARIO Y TABLA
+        // =========================================================
+        function handleProductEnter(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                addProductToForm();
+            }
+        }
+
+        function addProductToForm() {
+            const input = document.getElementById('product-input');
+            const name = input.value.trim();
+            if (!name) return;
+            tempProducts.push({ name: name, done: false });
+            input.value = '';
+            input.focus();
+            renderFormProductList();
+        }
+
+        function removeProductFromForm(idx) {
+            tempProducts.splice(idx, 1);
+            renderFormProductList();
+        }
+
+        function renderFormProductList() {
+            const ul = document.getElementById('form-product-list');
+            ul.innerHTML = '';
+            tempProducts.forEach((item, idx) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <span>&#10003; ${escapeHtml(item.name)}</span>
+                    <button type="button" onclick="removeProductFromForm(${idx})">&times;</button>
+                `;
+                ul.appendChild(li);
+            });
+        }
+
+        function toggleProductCheck(orderId, productIndex) {
+            const order = orders.find(o => o.id === orderId);
+            if (!order || !order.products[productIndex]) return;
+            order.products[productIndex].done = !order.products[productIndex].done;
+            saveAll();
+        }
+
+        // =========================================================
+        // MÚLTIPLES COMPROBANTES (COMPRESIÓN Y GALERÍA)
+        // =========================================================
+        function compressImageFile(file, callback) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const maxDim = 850;
+                    let width = img.width;
+                    let height = img.height;
+                    if (width > height && width > maxDim) {
+                        height *= maxDim / width;
+                        width = maxDim;
+                    } else if (height > maxDim) {
+                        width *= maxDim / height;
+                        height = maxDim;
+                    }
+                    canvas.width = width;
+                    canvas.height = height;
+                    canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+                    callback(canvas.toDataURL('image/jpeg', 0.75));
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function handleMultiReceiptUpload(event) {
+            const files = Array.from(event.target.files);
+            if (!files.length) return;
+            files.forEach(file => {
+                compressImageFile(file, (dataUrl) => {
+                    currentOrderReceipts.push(dataUrl);
+                    renderFormReceiptsGallery();
+                });
+            });
+            event.target.value = '';
+        }
+
+        function removeFormReceipt(idx) {
+            currentOrderReceipts.splice(idx, 1);
+            renderFormReceiptsGallery();
+        }
+
+        function renderFormReceiptsGallery() {
+            const container = document.getElementById('order-receipts-gallery');
+            container.innerHTML = '';
+            currentOrderReceipts.forEach((src, idx) => {
+                const div = document.createElement('div');
+                div.className = 'thumb-chip';
+                div.innerHTML = `
+                    <img src="${src}" onclick="openReceiptsModal(['${src}'], 'Vista previa comprobante')">
+                    <button type="button" onclick="removeFormReceipt(${idx})">&times;</button>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function handleExpenseReceiptUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            compressImageFile(file, (dataUrl) => {
+                currentExpenseReceipt = dataUrl;
+                document.getElementById('expense-receipt-thumb').src = dataUrl;
+                document.getElementById('expense-receipt-preview-wrap').style.display = 'flex';
+            });
+        }
+
+        function clearExpenseReceipt() {
+            currentExpenseReceipt = null;
+            document.getElementById('expense-receipt-input').value = '';
+            document.getElementById('expense-receipt-preview-wrap').style.display = 'none';
+        }
+
+        function openReceiptsModal(receiptsArray, title) {
+            document.getElementById('receipt-modal-title').textContent = title;
+            const grid = document.getElementById('receipts-modal-grid');
+            grid.innerHTML = '';
+            receiptsArray.forEach((src, idx) => {
+                const wrap = document.createElement('div');
+                wrap.style.textAlign = 'center';
+                wrap.innerHTML = `
+                    <img src="${src}" alt="Comprobante ${idx + 1}">
+                    <a href="${src}" download="comprobante_${idx + 1}.jpg" style="display:inline-block; margin-top:6px; font-size:0.78rem; color:var(--choco-dark); font-weight:700;">&#128229; Descargar #${idx + 1}</a>
+                `;
+                grid.appendChild(wrap);
+            });
+            document.getElementById('receipt-modal').classList.add('open');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('open');
+        }
+
+        function closeModalOutside(e, id) {
+            if (e.target.id === id) closeModal(id);
+        }
+
+        // =========================================================
+        // CRUD DE PEDIDOS Y MULTI-ABONOS
+        // =========================================================
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const id = document.getElementById('order-id').value;
+            const client = document.getElementById('client').value.trim();
+            const phone = document.getElementById('client-phone').value.trim();
+
+            const pendingInputVal = document.getElementById('product-input').value.trim();
+            if (pendingInputVal) {
+                tempProducts.push({ name: pendingInputVal, done: false });
+                document.getElementById('product-input').value = '';
+            }
+
+            if (tempProducts.length === 0) {
+                alert('Añade al menos un producto al checklist del pedido.');
+                document.getElementById('product-input').focus();
+                return;
+            }
+
+            const price = parseFloat(document.getElementById('price').value) || 0;
+            const prodDate = document.getElementById('prodDate').value;
+            const deliveryDate = document.getElementById('deliveryDate').value;
+            const status = document.getElementById('order-status-select').value;
+            const notes = document.getElementById('notes').value.trim();
+            const productsSummary = tempProducts.map(p => p.name).join(', ');
+
+            if (id) {
+                const idx = orders.findIndex(o => o.id === id);
+                if (idx !== -1) {
+                    orders[idx] = {
+                        ...orders[idx],
+                        client,
+                        phone,
+                        product: productsSummary,
+                        products: [...tempProducts],
+                        price,
+                        prodDate,
+                        deliveryDate,
+                        status,
+                        notes,
+                        receipts: [...currentOrderReceipts]
+                    };
+                }
+                cancelEditOrder();
+            } else {
+                let initialDeposit = parseFloat(document.getElementById('deposit').value) || 0;
+                if (initialDeposit > price) initialDeposit = price;
+
+                const payments = [];
+                if (initialDeposit > 0) {
+                    payments.push({
+                        id: Date.now().toString(),
+                        amount: initialDeposit,
+                        date: todayStr,
+                        note: 'Abono inicial'
+                    });
+                }
+
+                orders.push({
+                    id: Date.now().toString(),
+                    client,
+                    phone,
+                    product: productsSummary,
+                    products: [...tempProducts],
+                    price,
+                    payments,
+                    prodDate,
+                    deliveryDate,
+                    status,
+                    notes,
+                    receipts: [...currentOrderReceipts]
+                });
+
+                this.reset();
+                tempProducts = [];
+                currentOrderReceipts = [];
+                renderFormProductList();
+                renderFormReceiptsGallery();
+                document.getElementById('deliveryDate').value = todayStr;
+            }
+
+            saveAll();
+        });
+
+        function editOrder(id) {
+            const order = orders.find(o => o.id === id);
+            if (!order) return;
+
+            document.getElementById('order-id').value = order.id;
+            document.getElementById('client').value = order.client;
+            document.getElementById('client-phone').value = order.phone || '';
+            tempProducts = order.products.map(p => ({ ...p }));
+            renderFormProductList();
+
+            document.getElementById('price').value = order.price;
+            document.getElementById('initial-deposit-group').style.display = 'none';
+            document.getElementById('prodDate').value = order.prodDate || '';
+            document.getElementById('deliveryDate').value = order.deliveryDate;
+            document.getElementById('order-status-select').value = order.status;
+            document.getElementById('notes').value = order.notes || '';
+
+            currentOrderReceipts = [...(order.receipts || [])];
+            renderFormReceiptsGallery();
+
+            document.getElementById('order-form-title').textContent = 'Editando Pedido';
+            document.getElementById('order-submit-btn').textContent = 'Actualizar Pedido';
+            document.getElementById('order-cancel-btn').style.display = 'block';
+            switchTab('orders');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function cancelEditOrder() {
+            document.getElementById('order-form').reset();
+            document.getElementById('order-id').value = '';
+            document.getElementById('initial-deposit-group').style.display = 'block';
+            tempProducts = [];
+            currentOrderReceipts = [];
+            renderFormProductList();
+            renderFormReceiptsGallery();
+            document.getElementById('deliveryDate').value = todayStr;
+            document.getElementById('order-form-title').textContent = 'Nuevo Pedido';
+            document.getElementById('order-submit-btn').innerHTML = 'Guardar Pedido &hearts;';
+            document.getElementById('order-cancel-btn').style.display = 'none';
+        }
+
+        function changeOrderStatus(id, newStatus) {
+            const order = orders.find(o => o.id === id);
+            if (!order) return;
+            order.status = newStatus;
+            saveAll();
+        }
+
+        function deleteOrder(id) {
+            if (confirm('¿Eliminar este pedido de Mibes?')) {
+                orders = orders.filter(o => o.id !== id);
+                saveAll();
+            }
+        }
+
+        // Modal de Multi-Abonos
+        function openAbonosModal(orderId) {
+            const order = orders.find(o => o.id === orderId);
+            if (!order) return;
+
+            document.getElementById('abono-order-id').value = order.id;
+            document.getElementById('abonos-modal-title').textContent = `Abonos de ${order.client}`;
+            document.getElementById('new-abono-date').value = todayStr;
+
+            const paid = getPaidAmount(order);
+            const balance = Math.max(0, order.price - paid);
+
+            document.getElementById('abonos-summary-box').innerHTML = `
+                <span><strong>Total Pedido:</strong> $${order.price.toFixed(2)}</span>
+                <span style="color:#065F46;"><strong>Total Abonado:</strong> $${paid.toFixed(2)}</span>
+                <span style="color:#991B1B;"><strong>Saldo Pendiente:</strong> $${balance.toFixed(2)}</span>
+            `;
+
+            const ul = document.getElementById('abonos-modal-list');
+            ul.innerHTML = '';
+            if (!order.payments || order.payments.length === 0) {
+                ul.innerHTML = '<li style="color:var(--text-muted); justify-content:center;">No hay abonos registrados todavía.</li>';
+            } else {
+                order.payments.forEach(p => {
+                    const [y, m, d] = p.date.split('-');
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <div>
+                            <strong style="color:#065F46;">+$${parseFloat(p.amount).toFixed(2)}</strong>
+                            <span style="font-size:0.78rem; color:var(--text-muted);"> · ${d}/${m}/${y}</span>
+                            ${p.note ? `<div style="font-size:0.76rem; color:var(--text-main);">${escapeHtml(p.note)}</div>` : ''}
+                        </div>
+                        <button type="button" class="btn-icon delete" onclick="deleteAbono('${order.id}', '${p.id}')" title="Eliminar abono">&times;</button>
+                    `;
+                    ul.appendChild(li);
+                });
+            }
+
+            document.getElementById('abonos-modal').classList.add('open');
+        }
+
+        document.getElementById('new-abono-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const orderId = document.getElementById('abono-order-id').value;
+            const order = orders.find(o => o.id === orderId);
+            if (!order) return;
+
+            const amount = parseFloat(document.getElementById('new-abono-amount').value) || 0;
+            const date = document.getElementById('new-abono-date').value;
+            const note = document.getElementById('new-abono-note').value.trim();
+
+            if (amount <= 0) return;
+
+            order.payments.push({
+                id: Date.now().toString(),
+                amount,
+                date,
+                note
+            });
+
+            this.reset();
+            saveAll();
+            openAbonosModal(orderId);
+        });
+
+        function deleteAbono(orderId, paymentId) {
+            const order = orders.find(o => o.id === orderId);
+            if (!order) return;
+            if (confirm('¿Eliminar este abono?')) {
+                order.payments = order.payments.filter(p => p.id !== paymentId);
+                saveAll();
+                openAbonosModal(orderId);
+            }
+        }
+
+        // =========================================================
+        // INVENTARIO 1: FILAMENTOS 3D
+        // =========================================================
+        document.getElementById('filament-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const id = document.getElementById('fil-id').value;
+            const type = document.getElementById('fil-type').value;
+            const brand = document.getElementById('fil-brand').value.trim();
+            const colorName = document.getElementById('fil-color-name').value.trim();
+            const colorHex = document.getElementById('fil-color-hex').value;
+            const weight = parseFloat(document.getElementById('fil-weight').value) || 0;
+            const minAlert = parseFloat(document.getElementById('fil-min-alert').value) || 200;
+
+            if (id) {
+                const idx = filaments.findIndex(f => f.id === id);
+                if (idx !== -1) {
+                    filaments[idx] = { ...filaments[idx], type, brand, colorName, colorHex, weight, minAlert };
+                }
+                cancelEditFilament();
+            } else {
+                filaments.push({
+                    id: Date.now().toString(),
+                    type,
+                    brand,
+                    colorName,
+                    colorHex,
+                    weight,
+                    minAlert
+                });
+                this.reset();
+                document.getElementById('fil-min-alert').value = 200;
+            }
+            saveAll();
+        });
+
+        function consumeFilament(id) {
+            const fil = filaments.find(f => f.id === id);
+            if (!fil) return;
+            const usedStr = prompt(`¿Cuántos gramos de ${fil.type} ${fil.colorName} se consumieron? (Disponibles: ${fil.weight}g)`, '50');
+            if (usedStr === null) return;
+            const used = parseFloat(usedStr);
+            if (!isNaN(used) && used > 0) {
+                fil.weight = Math.max(0, fil.weight - used);
+                saveAll();
+            }
+        }
+
+        function editFilament(id) {
+            const fil = filaments.find(f => f.id === id);
+            if (!fil) return;
+            document.getElementById('fil-id').value = fil.id;
+            document.getElementById('fil-type').value = fil.type;
+            document.getElementById('fil-brand').value = fil.brand;
+            document.getElementById('fil-color-name').value = fil.colorName;
+            document.getElementById('fil-color-hex').value = fil.colorHex;
+            document.getElementById('fil-weight').value = fil.weight;
+            document.getElementById('fil-min-alert').value = fil.minAlert;
+
+            document.getElementById('fil-form-title').textContent = 'Editando Filamento';
+            document.getElementById('fil-submit-btn').textContent = 'Actualizar Filamento';
+            document.getElementById('fil-cancel-btn').style.display = 'block';
+        }
+
+        function cancelEditFilament() {
+            document.getElementById('filament-form').reset();
+            document.getElementById('fil-id').value = '';
+            document.getElementById('fil-min-alert').value = 200;
+            document.getElementById('fil-form-title').textContent = 'Registrar Bobina de Filamento';
+            document.getElementById('fil-submit-btn').textContent = 'Guardar Filamento';
+            document.getElementById('fil-cancel-btn').style.display = 'none';
+        }
+
+        function deleteFilament(id) {
+            if (confirm('¿Eliminar esta bobina del inventario?')) {
+                filaments = filaments.filter(f => f.id !== id);
+                saveAll();
+            }
+        }
+
+        // =========================================================
+        // INVENTARIO 2: MATERIALES GENERALES E INSUMOS
+        // =========================================================
+        document.getElementById('material-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const id = document.getElementById('mat-id').value;
+            const name = document.getElementById('mat-name').value.trim();
+            const category = document.getElementById('mat-category').value;
+            const unit = document.getElementById('mat-unit').value.trim();
+            const qty = parseFloat(document.getElementById('mat-qty').value) || 0;
+            const minAlert = parseFloat(document.getElementById('mat-min-alert').value) || 5;
+
+            if (id) {
+                const idx = materials.findIndex(m => m.id === id);
+                if (idx !== -1) {
+                    materials[idx] = { ...materials[idx], name, category, unit, qty, minAlert };
+                }
+                cancelEditMaterial();
+            } else {
+                materials.push({
+                    id: Date.now().toString(),
+                    name,
+                    category,
+                    unit,
+                    qty,
+                    minAlert
+                });
+                this.reset();
+                document.getElementById('mat-min-alert').value = 5;
+            }
+            saveAll();
+        });
+
+        function changeMaterialQty(id, delta) {
+            const mat = materials.find(m => m.id === id);
+            if (!mat) return;
+            mat.qty = Math.max(0, mat.qty + delta);
+            saveAll();
+        }
+
+        function editMaterial(id) {
+            const mat = materials.find(m => m.id === id);
+            if (!mat) return;
+            document.getElementById('mat-id').value = mat.id;
+            document.getElementById('mat-name').value = mat.name;
+            document.getElementById('mat-category').value = mat.category;
+            document.getElementById('mat-unit').value = mat.unit;
+            document.getElementById('mat-qty').value = mat.qty;
+            document.getElementById('mat-min-alert').value = mat.minAlert;
+
+            document.getElementById('mat-form-title').textContent = 'Editando Insumo';
+            document.getElementById('mat-submit-btn').textContent = 'Actualizar Insumo';
+            document.getElementById('mat-cancel-btn').style.display = 'block';
+        }
+
+        function cancelEditMaterial() {
+            document.getElementById('material-form').reset();
+            document.getElementById('mat-id').value = '';
+            document.getElementById('mat-min-alert').value = 5;
+            document.getElementById('mat-form-title').textContent = 'Registrar Material / Insumo';
+            document.getElementById('mat-submit-btn').textContent = 'Guardar Insumo';
+            document.getElementById('mat-cancel-btn').style.display = 'none';
+        }
+
+        function deleteMaterial(id) {
+            if (confirm('¿Eliminar este material del inventario?')) {
+                materials = materials.filter(m => m.id !== id);
+                saveAll();
+            }
+        }
+
+        // =========================================================
+        // GASTOS E INVERSIÓN (CON EDICIÓN)
+        // =========================================================
+        document.getElementById('expense-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const id = document.getElementById('exp-id').value;
+            const desc = document.getElementById('exp-desc').value.trim();
+            const category = document.getElementById('exp-category').value;
+            const amount = parseFloat(document.getElementById('exp-amount').value) || 0;
+            const date = document.getElementById('exp-date').value;
+
+            if (id) {
+                const idx = expenses.findIndex(ex => ex.id === id);
+                if (idx !== -1) {
+                    expenses[idx] = {
+                        ...expenses[idx],
+                        desc,
+                        category,
+                        amount,
+                        date,
+                        receipt: currentExpenseReceipt
+                    };
+                }
+                cancelEditExpense();
+            } else {
+                expenses.push({
+                    id: Date.now().toString(),
+                    desc,
+                    category,
+                    amount,
+                    date,
+                    receipt: currentExpenseReceipt
+                });
+                this.reset();
+                document.getElementById('exp-date').value = todayStr;
+                clearExpenseReceipt();
+            }
+            saveAll();
+        });
+
+        function editExpense(id) {
+            const ex = expenses.find(item => item.id === id);
+            if (!ex) return;
+            document.getElementById('exp-id').value = ex.id;
+            document.getElementById('exp-desc').value = ex.desc;
+            document.getElementById('exp-category').value = ex.category;
+            document.getElementById('exp-amount').value = ex.amount;
+            document.getElementById('exp-date').value = ex.date;
+
+            currentExpenseReceipt = ex.receipt || null;
+            if (currentExpenseReceipt) {
+                document.getElementById('expense-receipt-thumb').src = currentExpenseReceipt;
+                document.getElementById('expense-receipt-preview-wrap').style.display = 'flex';
+            } else {
+                clearExpenseReceipt();
+            }
+
+            document.getElementById('exp-form-title').textContent = 'Editando Gasto';
+            document.getElementById('exp-submit-btn').textContent = 'Actualizar Gasto';
+            document.getElementById('exp-cancel-btn').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function cancelEditExpense() {
+            document.getElementById('expense-form').reset();
+            document.getElementById('exp-id').value = '';
+            document.getElementById('exp-date').value = todayStr;
+            clearExpenseReceipt();
+            document.getElementById('exp-form-title').textContent = 'Registrar Gasto / Inversión';
+            document.getElementById('exp-submit-btn').textContent = '+ Añadir a Inversión';
+            document.getElementById('exp-cancel-btn').style.display = 'none';
+        }
+
+        function deleteExpense(id) {
+            if (confirm('¿Eliminar este gasto registrado?')) {
+                expenses = expenses.filter(ex => ex.id !== id);
+                saveAll();
+            }
+        }
+
+        // =========================================================
+        // CALENDARIO MENSUAL
+        // =========================================================
+        function changeCalMonth(delta) {
+            calCurrentDate.setMonth(calCurrentDate.getMonth() + delta);
+            renderCalendar();
+        }
+
+        function renderCalendar() {
+            const grid = document.getElementById('calendar-grid');
+            const year = calCurrentDate.getFullYear();
+            const month = calCurrentDate.getMonth();
+
+            const monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+            document.getElementById('cal-month-title').textContent = `${monthNames[month]} ${year}`;
+
+            const dayNames = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+            grid.innerHTML = dayNames.map(d => `<div class="cal-day-name">${d}</div>`).join('');
+
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const today = new Date();
+            today.setHours(0,0,0,0);
+
+            for (let i = 0; i < firstDay; i++) {
+                grid.innerHTML += `<div class="cal-cell empty"></div>`;
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateObj = new Date(year, month, day);
+                const isoDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                const isToday = dateObj.getTime() === today.getTime();
+
+                const deliveries = orders.filter(o => o.deliveryDate === isoDate && o.status !== 'cancelado');
+                const productions = orders.filter(o => o.prodDate === isoDate && o.status !== 'cancelado' && o.status !== 'entregado');
+                const isOverload = deliveries.length >= 3;
+
+                let eventsHtml = '';
+                deliveries.forEach(o => {
+                    let cls = 'ev-delivery';
+                    let prefix = '📦';
+                    if (o.status === 'entregado') {
+                        cls = 'ev-done';
+                        prefix = '✔';
+                    } else if (dateObj < today) {
+                        cls = 'ev-overdue';
+                        prefix = '⚠️';
+                    }
+                    eventsHtml += `<div class="cal-event ${cls}" onclick="editOrder('${o.id}')" title="Entrega: ${escapeHtml(o.client)} (${escapeHtml(o.product)})">${prefix} ${escapeHtml(o.client)}</div>`;
+                });
+
+                productions.forEach(o => {
+                    eventsHtml += `<div class="cal-event ev-prod" onclick="editOrder('${o.id}')" title="Producción: ${escapeHtml(o.client)}">⚙️ Prod: ${escapeHtml(o.client)}</div>`;
+                });
+
+                grid.innerHTML += `
+                    <div class="cal-cell ${isToday ? 'today' : ''} ${isOverload ? 'overload' : ''}">
+                        <div class="cal-cell-top">
+                            <span>${day}</span>
+                            ${isOverload ? `<span class="overload-badge">${deliveries.length} ped.</span>` : ''}
+                        </div>
+                        ${eventsHtml}
+                    </div>
+                `;
+            }
+        }
+
+        // =========================================================
+        // RENDERIZADO GENERAL DE TODAS LAS PESTAÑAS
+        // =========================================================
+        function formatDateInfo(dateString, status) {
+            const [year, month, day] = dateString.split('-');
+            const date = new Date(year, month - 1, day);
+            const today = new Date();
+            today.setHours(0,0,0,0);
+
+            const diffDays = Math.ceil((date - today) / (1000 * 60 * 60 * 24));
+            const formatted = `${day}/${month}/${year}`;
+
+            if (status === 'entregado' || status === 'cancelado') {
+                return { text: formatted, urgent: false };
+            }
+            if (diffDays < 0) return { text: `${formatted} (Atrasado)`, urgent: true };
+            if (diffDays === 0) return { text: `Hoy (${formatted})`, urgent: true };
+            if (diffDays === 1) return { text: `Mañana (${formatted})`, urgent: true };
+            return { text: formatted, urgent: false };
+        }
+
+        function renderAll() {
+            const validOrders = orders.filter(o => o.status !== 'cancelado');
+
+            const collectedReal = validOrders.reduce((sum, o) => sum + getPaidAmount(o), 0);
+            const totalSalesAll = validOrders.reduce((sum, o) => sum + o.price, 0);
+            const pendingToCollect = Math.max(0, totalSalesAll - collectedReal);
+            const totalInvested = expenses.reduce((sum, ex) => sum + ex.amount, 0);
+
+            let recoveryPct = 0;
+            if (totalInvested > 0) recoveryPct = (collectedReal / totalInvested) * 100;
+            else if (collectedReal > 0) recoveryPct = 100;
+
+            const remainingRecover = Math.max(0, totalInvested - collectedReal);
+            document.getElementById('recovery-bar').style.width = `${Math.min(100, recoveryPct)}%`;
+            document.getElementById('recovery-percent').textContent = `${Math.round(recoveryPct)}%`;
+
+            if (totalInvested === 0 && collectedReal === 0) {
+                document.getElementById('recovery-headline').textContent = '¡Bienvenidos, Michael y Siberley!';
+                document.getElementById('recovery-message').textContent = 'Registren sus pedidos, abonos, materiales e inversión para llevar el control total de Mibes.';
+            } else if (collectedReal >= totalInvested && totalInvested > 0) {
+                document.getElementById('recovery-headline').textContent = '¡Inversión 100% Recuperada! 🎉';
+                document.getElementById('recovery-message').textContent = `Ganancia neta acumulada sobre inversión: $${(collectedReal - totalInvested).toFixed(2)}`;
+            } else {
+                document.getElementById('recovery-headline').textContent = 'Recuperación de Inversión';
+                document.getElementById('recovery-message').textContent = `Llevan recuperado el ${Math.round(recoveryPct)}% de su inversión con dinero real cobrado.`;
+            }
+
+            document.getElementById('label-collected').textContent = `Cobrado Real: $${collectedReal.toFixed(2)}`;
+            document.getElementById('label-remaining').textContent = `Falta por recuperar: $${remainingRecover.toFixed(2)}`;
+            document.getElementById('label-invested').textContent = `Inversión Total: $${totalInvested.toFixed(2)}`;
+
+            // --- PANEL PRINCIPAL (KPIs) ---
+            const currentYM = new Date().toISOString().slice(0, 7);
+            const monthOrders = validOrders.filter(o => (o.deliveryDate || '').startsWith(currentYM));
+            const monthSales = monthOrders.reduce((s, o) => s + o.price, 0);
+
+            const monthExpensesList = expenses.filter(ex => (ex.date || '').startsWith(currentYM));
+            const monthExpenses = monthExpensesList.reduce((s, ex) => s + ex.amount, 0);
+            const monthProfitEst = monthSales - monthExpenses;
+
+            const activeOrders = validOrders.filter(o => o.status !== 'entregado');
+
+            document.getElementById('dash-month-sales').textContent = `$${monthSales.toFixed(2)}`;
+            document.getElementById('dash-month-sales-sub').textContent = `${monthOrders.length} pedido(s) este mes`;
+
+            const profitEl = document.getElementById('dash-month-profit');
+            profitEl.textContent = `${monthProfitEst >= 0 ? '+' : '-'}$${Math.abs(monthProfitEst).toFixed(2)}`;
+            profitEl.style.color = monthProfitEst >= 0 ? '#065F46' : '#991B1B';
+
+            document.getElementById('dash-active-orders').textContent = activeOrders.length;
+            document.getElementById('dash-pending-balance').textContent = `Por cobrar total: $${pendingToCollect.toFixed(2)}`;
+
+            document.getElementById('dash-month-expenses').textContent = `$${monthExpenses.toFixed(2)}`;
+            document.getElementById('dash-month-expenses-sub').textContent = `${monthExpensesList.length} gasto(s) este mes`;
+
+            // Entregas próximas
+            const upcomingSorted = [...activeOrders].sort((a, b) => new Date(a.deliveryDate) - new Date(b.deliveryDate)).slice(0, 5);
+            const upBox = document.getElementById('dash-upcoming-list');
+            if (upcomingSorted.length === 0) {
+                upBox.innerHTML = '<p style="color:var(--text-muted); font-size:0.86rem;">No hay entregas pendientes próximas.</p>';
+            } else {
+                upBox.innerHTML = upcomingSorted.map(o => {
+                    const dInfo = formatDateInfo(o.deliveryDate, o.status);
+                    const doneCount = o.products.filter(p => p.done).length;
+                    const pct = o.products.length ? Math.round((doneCount / o.products.length) * 100) : 0;
+                    return `
+                        <div style="display:flex; justify-content:space-between; align-items:center; padding:0.6rem 0; border-bottom:1px solid var(--cream-border);">
+                            <div>
+                                <strong style="color:var(--choco-dark); font-size:0.9rem;">${escapeHtml(o.client)}</strong>
+                                <div style="font-size:0.78rem; color:var(--text-muted);">${escapeHtml(o.product)} · Avance: ${pct}%</div>
+                            </div>
+                            <span class="${dInfo.urgent ? 'date-urgent' : 'date-normal'}">${dInfo.text}</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Productos más vendidos
+            const prodCounter = {};
+            const prodRevenue = {};
+            validOrders.forEach(o => {
+                const perItemPrice = o.products.length ? (o.price / o.products.length) : o.price;
+                o.products.forEach(p => {
+                    const key = p.name.trim();
+                    prodCounter[key] = (prodCounter[key] || 0) + 1;
+                    prodRevenue[key] = (prodRevenue[key] || 0) + perItemPrice;
+                });
+            });
+
+            const topProds = Object.entries(prodCounter).sort((a, b) => b[1] - a[1]).slice(0, 5);
+            const topBox = document.getElementById('dash-top-products');
+            if (topProds.length === 0) {
+                topBox.innerHTML = '<p style="color:var(--text-muted); font-size:0.86rem;">Aún no hay productos vendidos registrados.</p>';
+            } else {
+                topBox.innerHTML = topProds.map(([name, count], idx) => `
+                    <div style="display:flex; justify-content:space-between; align-items:center; padding:0.55rem 0; border-bottom:1px solid var(--cream-border);">
+                        <span style="font-size:0.87rem; font-weight:600;">#${idx + 1} ${escapeHtml(name)}</span>
+                        <span class="badge-cat">${count} unid.</span>
+                    </div>
+                `).join('');
+            }
+
+            // Alertas de filamentos o materiales bajos
+            const lowFils = filaments.filter(f => f.weight <= f.minAlert);
+            const lowMats = materials.filter(m => m.qty <= m.minAlert);
+            const totalLow = lowFils.length + lowMats.length;
+
+            const navBadge = document.getElementById('low-inv-badge');
+            const dashAlertCard = document.getElementById('dash-inventory-alert-card');
+
+            if (totalLow > 0) {
+                navBadge.style.display = 'inline-block';
+                navBadge.textContent = totalLow;
+                dashAlertCard.style.display = 'block';
+
+                let listHtml = '';
+                lowFils.forEach(f => {
+                    listHtml += `
+                        <span style="background:white; border:1px solid #FCA5A5; padding:0.4rem 0.75rem; border-radius:10px; font-size:0.82rem; font-weight:700; color:#991B1B;">
+                            🧵 ${escapeHtml(f.type)} ${escapeHtml(f.colorName)} (${escapeHtml(f.brand)}): quedan ${f.weight}g
+                        </span>
+                    `;
+                });
+                lowMats.forEach(m => {
+                    listHtml += `
+                        <span style="background:white; border:1px solid #FCA5A5; padding:0.4rem 0.75rem; border-radius:10px; font-size:0.82rem; font-weight:700; color:#991B1B;">
+                            📦 ${escapeHtml(m.name)}: quedan ${m.qty} ${escapeHtml(m.unit)}
+                        </span>
+                    `;
+                });
+                document.getElementById('dash-low-inventory-list').innerHTML = listHtml;
+            } else {
+                navBadge.style.display = 'none';
+                dashAlertCard.style.display = 'none';
+            }
+
+            // --- TABLA DE PEDIDOS ---
+            const searchTerm = document.getElementById('search-order').value.toLowerCase();
+            const statusFilter = document.getElementById('filter-status').value;
+            const paymentFilter = document.getElementById('filter-payment').value;
+            const ordersTbody = document.getElementById('orders-tbody');
+
+            const filteredOrders = orders.filter(o => {
+                const prodsText = o.products.map(p => p.name).join(' ').toLowerCase();
+                const matchText = o.client.toLowerCase().includes(searchTerm) || (o.phone || '').toLowerCase().includes(searchTerm) || prodsText.includes(searchTerm);
+                const matchStatus = statusFilter === 'all' || o.status === statusFilter;
+
+                const paid = getPaidAmount(o);
+                const debt = o.price - paid;
+                let matchPay = true;
+                if (paymentFilter === 'debt') matchPay = debt > 0.009 && o.status !== 'cancelado';
+                if (paymentFilter === 'paid') matchPay = debt <= 0.009;
+
+                return matchText && matchStatus && matchPay;
+            }).sort((a, b) => new Date(a.deliveryDate) - new Date(b.deliveryDate));
+
+            ordersTbody.innerHTML = '';
+            if (filteredOrders.length === 0) {
+                ordersTbody.innerHTML = `<tr><td colspan="5"><div class="empty-state"><p>No se encontraron pedidos con esos filtros.</p></div></td></tr>`;
+            } else {
+                filteredOrders.forEach(order => {
+                    const dateInfo = formatDateInfo(order.deliveryDate, order.status);
+                    const paid = getPaidAmount(order);
+                    const balance = Math.max(0, order.price - paid);
+
+                    let payBadge = '<span class="pay-badge pay-sin">Sin abono</span>';
+                    if (paid >= order.price && order.price > 0) {
+                        payBadge = '<span class="pay-badge pay-pagado">&#10004; Pagado 100%</span>';
+                    } else if (paid > 0) {
+                        payBadge = `<span class="pay-badge pay-parcial">Abonado (${order.payments.length})</span>`;
+                    }
+
+                    const doneCount = order.products.filter(p => p.done).length;
+                    const totalProds = order.products.length;
+                    const prodPct = totalProds > 0 ? Math.round((doneCount / totalProds) * 100) : 0;
+
+                    const checklistHtml = order.products.map((p, idx) => `
+                        <label class="order-checklist-item ${p.done ? 'checked' : ''}">
+                            <input type="checkbox" ${p.done ? 'checked' : ''} onchange="toggleProductCheck('${order.id}', ${idx})">
+                            <span>${escapeHtml(p.name)}</span>
+                        </label>
+                    `).join('');
+
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>
+                            <div class="client-name">
+                                ${escapeHtml(order.client)}
+                                ${order.phone ? `<span class="client-phone">&#128222; ${escapeHtml(order.phone)}</span>` : ''}
+                            </div>
+                            <div class="order-checklist">${checklistHtml}</div>
+                            <div class="mini-prod-bar-wrap">
+                                <div class="mini-prod-label">
+                                    <span>Producción: ${doneCount}/${totalProds}</span>
+                                    <span>${prodPct}%</span>
+                                </div>
+                                <div class="mini-prod-bg">
+                                    <div class="mini-prod-fill" style="width:${prodPct}%"></div>
+                                </div>
+                            </div>
+                            ${order.notes ? `<div style="font-size:0.76rem; color:var(--accent-rose); margin-top:4px;">&#9998; ${escapeHtml(order.notes)}</div>` : ''}
+                        </td>
+                        <td>
+                            ${order.prodDate ? `<div style="font-size:0.75rem; color:#3730A3; margin-bottom:3px;">&#9881;&#65039; Prod: ${order.prodDate.split('-').reverse().join('/')}</div>` : ''}
+                            <div class="${dateInfo.urgent ? 'date-urgent' : 'date-normal'}">&#128230; Ent: ${dateInfo.text}</div>
+                        </td>
+                        <td>
+                            <div style="line-height:1.35;">
+                                <strong style="color:var(--choco-dark);">Total: $${order.price.toFixed(2)}</strong><br>
+                                <span style="font-size:0.78rem; color:#065F46; font-weight:600;">Cobrado: $${paid.toFixed(2)}</span><br>
+                                <span style="font-size:0.78rem; color:#991B1B; font-weight:600;">Saldo: $${balance.toFixed(2)}</span><br>
+                                ${payBadge}
+                            </div>
+                        </td>
+                        <td>
+                            <select class="status-select st-${order.status}" onchange="changeOrderStatus('${order.id}', this.value)">
+                                <option value="pendiente" ${order.status === 'pendiente' ? 'selected' : ''}>&#9203; Pendiente</option>
+                                <option value="produccion" ${order.status === 'produccion' ? 'selected' : ''}>&#9881;&#65039; En producción</option>
+                                <option value="listo" ${order.status === 'listo' ? 'selected' : ''}>&#10024; Listo</option>
+                                <option value="entregado" ${order.status === 'entregado' ? 'selected' : ''}>&#10004; Entregado</option>
+                                <option value="cancelado" ${order.status === 'cancelado' ? 'selected' : ''}>&#10060; Cancelado</option>
+                            </select>
+                        </td>
+                        <td>
+                            <div class="actions">
+                                <button type="button" class="btn-icon abono-btn" onclick="openAbonosModal('${order.id}')" title="Registrar o ver abonos">&#128176; Abonos</button>
+                                ${(order.receipts && order.receipts.length > 0) ? `<button type="button" class="btn-icon receipt-btn" onclick='openReceiptsModal(${JSON.stringify(order.receipts)}, "Comprobantes - ${escapeHtml(order.client).replace(/"/g, '')}")'>&#128206; (${order.receipts.length})</button>` : ''}
+                                <button type="button" class="btn-icon" onclick="editOrder('${order.id}')" title="Editar">&#9998;</button>
+                                <button type="button" class="btn-icon delete" onclick="deleteOrder('${order.id}')" title="Eliminar">&#128465;</button>
+                            </div>
+                        </td>
+                    `;
+                    ordersTbody.appendChild(tr);
+                });
+            }
+
+            // --- INVENTARIO 1: FILAMENTOS ---
+            const filGrid = document.getElementById('filaments-grid');
+            if (filaments.length === 0) {
+                filGrid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><p>No hay bobinas registradas aún.</p></div>';
+            } else {
+                filGrid.innerHTML = filaments.map(f => {
+                    const isLow = f.weight <= f.minAlert;
+                    const pct = Math.min(100, Math.round((f.weight / 1000) * 100));
+                    return `
+                        <div class="inv-card ${isLow ? 'low-stock' : ''}">
+                            ${isLow ? '<span class="low-stock-tag">&#9888;&#65039; POCO MATERIAL</span>' : ''}
+                            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.35rem;">
+                                <span class="spool-dot" style="background:${f.colorHex};"></span>
+                                <strong style="color:var(--choco-dark); font-size:0.96rem;">${escapeHtml(f.type)} · ${escapeHtml(f.colorName)}</strong>
+                            </div>
+                            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.6rem;">Marca: <strong>${escapeHtml(f.brand)}</strong></div>
+                            <div style="display:flex; justify-content:space-between; font-size:0.83rem; font-weight:700; margin-bottom:4px;">
+                                <span>Disponible: ${f.weight}g</span>
+                                <span style="color:var(--text-muted);">Alerta: &le;${f.minAlert}g</span>
+                            </div>
+                            <div class="mini-prod-bg" style="height:8px; margin-bottom:0.8rem;">
+                                <div class="mini-prod-fill" style="width:${pct}%; background:${isLow ? '#EF4444' : 'var(--choco-dark)'};"></div>
+                            </div>
+                            <div class="actions">
+                                <button type="button" class="btn-icon abono-btn" onclick="consumeFilament('${f.id}')">- Descontar g</button>
+                                <button type="button" class="btn-icon" onclick="editFilament('${f.id}')">&#9998;</button>
+                                <button type="button" class="btn-icon delete" onclick="deleteFilament('${f.id}')">&#128465;</button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // --- INVENTARIO 2: MATERIALES GENERALES ---
+            const matGrid = document.getElementById('materials-grid');
+            if (materials.length === 0) {
+                matGrid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><p>No hay insumos o cajas registradas. Agrega tus materiales a la izquierda.</p></div>';
+            } else {
+                matGrid.innerHTML = materials.map(m => {
+                    const isLow = m.qty <= m.minAlert;
+                    return `
+                        <div class="inv-card ${isLow ? 'low-stock' : ''}">
+                            ${isLow ? '<span class="low-stock-tag">&#9888;&#65039; RESTOCK NECESARIO</span>' : ''}
+                            <div style="margin-bottom:0.35rem;">
+                                <strong style="color:var(--choco-dark); font-size:0.96rem;">${escapeHtml(m.name)}</strong>
+                            </div>
+                            <div style="font-size:0.78rem; margin-bottom:0.5rem;"><span class="badge-cat">${escapeHtml(m.category)}</span></div>
+                            <div style="display:flex; justify-content:space-between; font-size:0.84rem; font-weight:700; margin-bottom:4px;">
+                                <span>Stock: ${m.qty} ${escapeHtml(m.unit)}</span>
+                                <span style="color:var(--text-muted);">Mínimo: &le;${m.minAlert}</span>
+                            </div>
+                            <div class="qty-controls">
+                                <button type="button" class="btn-qty" onclick="changeMaterialQty('${m.id}', -1)" title="Restar 1">-</button>
+                                <button type="button" class="btn-qty" onclick="changeMaterialQty('${m.id}', 1)" title="Sumar 1">+</button>
+                                <button type="button" class="btn-icon" style="margin-left:auto;" onclick="editMaterial('${m.id}')">&#9998;</button>
+                                <button type="button" class="btn-icon delete" onclick="deleteMaterial('${m.id}')">&#128465;</button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // --- TABLA DE GASTOS ---
+            const expTbody = document.getElementById('expenses-tbody');
+            const sortedExp = [...expenses].sort((a, b) => new Date(b.date) - new Date(a.date));
+            if (sortedExp.length === 0) {
+                expTbody.innerHTML = '<tr><td colspan="5"><div class="empty-state"><p>Aún no hay gastos registrados.</p></div></td></tr>';
+            } else {
+                expTbody.innerHTML = sortedExp.map(ex => {
+                    const [y, m, d] = ex.date.split('-');
+                    return `
+                        <tr>
+                            <td><strong style="color:var(--choco-dark);">${escapeHtml(ex.desc)}</strong></td>
+                            <td><span class="badge-cat">${escapeHtml(ex.category)}</span></td>
+                            <td>${d}/${m}/${y}</td>
+                            <td><strong style="color:#991B1B;">-$${ex.amount.toFixed(2)}</strong></td>
+                            <td>
+                                <div class="actions">
+                                    ${ex.receipt ? `<button type="button" class="btn-icon receipt-btn" onclick="openReceiptsModal(['${ex.receipt}'], 'Gasto - ${escapeHtml(ex.desc).replace(/'/g, '')}')">&#128206; Ver</button>` : ''}
+                                    <button type="button" class="btn-icon" onclick="editExpense('${ex.id}')" title="Editar gasto">&#9998;</button>
+                                    <button type="button" class="btn-icon delete" onclick="deleteExpense('${ex.id}')" title="Eliminar">&#128465;</button>
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+            }
+
+            // --- CALENDARIO Y REPORTES ---
+            renderCalendar();
+            renderReports(collectedReal, totalInvested, recoveryPct, prodCounter, prodRevenue);
+        }
+
+        function renderReports(collectedReal, totalInvested, recoveryPct, prodCounter, prodRevenue) {
+            const netBal = collectedReal - totalInvested;
+            document.getElementById('rep-total-income').textContent = `$${collectedReal.toFixed(2)}`;
+            document.getElementById('rep-total-expense').textContent = `$${totalInvested.toFixed(2)}`;
+            const repNetEl = document.getElementById('rep-net-balance');
+            repNetEl.textContent = `${netBal >= 0 ? '+' : '-'}$${Math.abs(netBal).toFixed(2)}`;
+            repNetEl.style.color = netBal >= 0 ? '#065F46' : '#991B1B';
+            document.getElementById('rep-recovery-pct').textContent = `${Math.round(recoveryPct)}%`;
+
+            // 1. Comparación Mensual (Ingresos cobrados vs Gastos)
+            const monthlyMap = {};
+            orders.filter(o => o.status !== 'cancelado').forEach(o => {
+                o.payments.forEach(p => {
+                    const ym = (p.date || o.deliveryDate).slice(0, 7);
+                    if (!monthlyMap[ym]) monthlyMap[ym] = { income: 0, expense: 0 };
+                    monthlyMap[ym].income += parseFloat(p.amount) || 0;
+                });
+            });
+            expenses.forEach(ex => {
+                const ym = ex.date.slice(0, 7);
+                if (!monthlyMap[ym]) monthlyMap[ym] = { income: 0, expense: 0 };
+                monthlyMap[ym].expense += parseFloat(ex.amount) || 0;
+            });
+
+            const monthsKeys = Object.keys(monthlyMap).sort();
+            const monthlyBox = document.getElementById('chart-monthly-comparison');
+            if (monthsKeys.length === 0) {
+                monthlyBox.innerHTML = '<p style="color:var(--text-muted); font-size:0.85rem;">Registra abonos y gastos para visualizar la evolución mensual.</p>';
+            } else {
+                const maxVal = Math.max(...monthsKeys.map(k => Math.max(monthlyMap[k].income, monthlyMap[k].expense)), 1);
+                monthlyBox.innerHTML = monthsKeys.map(ym => {
+                    const inc = monthlyMap[ym].income;
+                    const exp = monthlyMap[ym].expense;
+                    const prof = inc - exp;
+                    const incPct = Math.round((inc / maxVal) * 100);
+                    const expPct = Math.round((exp / maxVal) * 100);
+                    return `
+                        <div class="bar-row" style="padding-bottom:0.6rem; border-bottom:1px solid var(--cream-border);">
+                            <div class="bar-row-label">
+                                <span>Mes ${ym}</span>
+                                <span style="color:${prof >= 0 ? '#065F46' : '#991B1B'};">Ganancia: ${prof >= 0 ? '+' : '-'}$${Math.abs(prof).toFixed(2)}</span>
+                            </div>
+                            <div style="font-size:0.75rem; color:#065F46;">Ingresos cobrados: $${inc.toFixed(2)}</div>
+                            <div class="bar-track" style="margin-bottom:4px;"><div class="bar-fill" style="width:${incPct}%; background:#10B981;"></div></div>
+                            <div style="font-size:0.75rem; color:#991B1B;">Gastos: $${exp.toFixed(2)}</div>
+                            <div class="bar-track"><div class="bar-fill" style="width:${expPct}%; background:#EF4444;"></div></div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // 2. Gastos por categoría
+            const catMap = {};
+            expenses.forEach(ex => {
+                catMap[ex.category] = (catMap[ex.category] || 0) + ex.amount;
+            });
+            const catEntries = Object.entries(catMap).sort((a, b) => b[1] - a[1]);
+            const catBox = document.getElementById('chart-expense-categories');
+            if (catEntries.length === 0) {
+                catBox.innerHTML = '<p style="color:var(--text-muted); font-size:0.85rem;">No hay gastos categorizados todavía.</p>';
+            } else {
+                catBox.innerHTML = catEntries.map(([cat, val]) => {
+                    const pct = totalInvested > 0 ? Math.round((val / totalInvested) * 100) : 0;
+                    return `
+                        <div class="bar-row">
+                            <div class="bar-row-label">
+                                <span>${escapeHtml(cat)}</span>
+                                <span>$${val.toFixed(2)} (${pct}%)</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:${pct}%; background:var(--choco-dark);"></div></div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // 3. Ventas por tipo de producto
+            const prodEntries = Object.entries(prodCounter).sort((a, b) => b[1] - a[1]);
+            const prodBox = document.getElementById('chart-product-sales');
+            if (prodEntries.length === 0) {
+                prodBox.innerHTML = '<p style="color:var(--text-muted); font-size:0.85rem;">No hay productos vendidos registrados.</p>';
+            } else {
+                const maxCount = Math.max(...prodEntries.map(e => e[1]), 1);
+                prodBox.innerHTML = prodEntries.map(([prod, count]) => {
+                    const pct = Math.round((count / maxCount) * 100);
+                    const rev = prodRevenue[prod] || 0;
+                    return `
+                        <div class="bar-row">
+                            <div class="bar-row-label">
+                                <span>${escapeHtml(prod)}</span>
+                                <span>${count} vendido(s) · ~$${rev.toFixed(2)}</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width:${pct}%; background:var(--accent-rose);"></div></div>
+                        </div>
+                    `;
+                }).join('');
+            }
+        }
+
+        // =========================================================
+        // EXPORTACIÓN CSV Y RESPALDO JSON
+        // =========================================================
+        function exportAllCSV() {
+            let csv = 'TIPO,CLIENTE_O_CONCEPTO,TELEFONO_O_CATEGORIA,DETALLE,TOTAL,COBRADO_O_GASTO,SALDO,FECHA_ENTREGA,ESTADO\n';
+            orders.forEach(o => {
+                const paid = getPaidAmount(o);
+                const saldo = Math.max(0, o.price - paid);
+                const prodsText = o.products.map(p => (p.done ? '[Listo] ' : '[Pendiente] ') + p.name).join(' | ');
+                csv += `PEDIDO,"${o.client}","${o.phone || ''}","${prodsText}",${o.price},${paid},${saldo},"${o.deliveryDate}","${o.status}"\n`;
+            });
+            expenses.forEach(ex => {
+                csv += `GASTO,"${ex.desc}","${ex.category}","",0,-${ex.amount},0,"${ex.date}","Registrado"\n`;
+            });
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `Mibes_Reporte_${todayStr}.csv`;
+            link.click();
+        }
+
+        function exportBackupJSON() {
+            const data = {
+                brand: 'Mibes by Michael y Siberley',
+                version: 'v5',
+                exportedAt: new Date().toISOString(),
+                orders,
+                expenses,
+                filaments,
+                materials
+            };
+            const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `Mibes_Respaldo_${todayStr}.json`;
+            link.click();
+        }
+
+        function importBackupJSON(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const parsed = JSON.parse(e.target.result);
+                    if (Array.isArray(parsed.orders) && Array.isArray(parsed.expenses)) {
+                        if (confirm('¿Restaurar todos los pedidos, abonos, filamentos, materiales y gastos del respaldo?')) {
+                            orders = parsed.orders;
+                            expenses = parsed.expenses;
+                            filaments = parsed.filaments || [];
+                            materials = parsed.materials || [];
+                            migrateData();
+                            saveAll();
+                        }
+                    } else {
+                        alert('Archivo de respaldo no válido.');
+                    }
+                } catch {
+                    alert('Error al leer el archivo.');
+                }
+            };
+            reader.readAsText(file);
+            event.target.value = '';
+        }
+
+        document.getElementById('search-order').addEventListener('input', renderAll);
+        document.getElementById('filter-status').addEventListener('change', renderAll);
+        document.getElementById('filter-payment').addEventListener('change', renderAll);
+
+        renderAll();
+    </script>
+</body>
+</html>
